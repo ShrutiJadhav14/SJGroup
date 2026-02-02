@@ -8,10 +8,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "#" },
-    { name: "Projects", path: "#" },
-    { name: "About", path: "#" },
-    { name: "Contact", path: "#" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -25,7 +25,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Logo"
-              className="h-10 w-auto object-contain"
+              className="h-15 w-auto object-contain"
             />
           </div>
 
