@@ -2,17 +2,17 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-import Projects from "../pages/Projects";
+import Projects  from "../pages/Projects";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "#" },
+    { name: "Services", path: "/services" },
     { name: "Projects", path: "/projects" },
-    { name: "About", path: "#" },
-    { name: "Contact", path: "#" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const linkStyle =
@@ -31,8 +31,8 @@ export default function Navbar() {
           <div className="flex items-center">
             <img
               src={logo}
-              alt="SJ Group Logo"
-              className="h-10 w-auto object-contain"
+              alt="Logo"
+              className="h-15 w-auto object-contain"
             />
           </div>
 
