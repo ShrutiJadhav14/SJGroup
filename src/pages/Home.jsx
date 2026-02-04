@@ -68,7 +68,7 @@ export default function Home() {
           transition={{ delay: 0.6 }}
           className="mt-6 text-gray-200 text-base sm:text-lg md:text-xl"
         >
-          Premium Interior & Infrastructure Solutions by SJ Groups India
+          Premium Interior & Infrastructure Solutions by SJ Group India
         </motion.p>
 
         <motion.div
@@ -77,7 +77,7 @@ export default function Home() {
           transition={{ delay: 0.9 }}
           className="mt-8"
         >
-          <button className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl">
+          <button className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl" onClick={() => window.location.href = '/projects'}>
             Explore Projects
           </button>
         </motion.div>
@@ -144,7 +144,7 @@ export default function Home() {
                   <p className="text-gray-400 mt-2">
                     {project.desc}
                   </p>
-                  <button className="mt-4 inline-flex items-center text-orange-500 hover:text-orange-400 transition font-medium">
+                  <button className="mt-4 inline-flex items-center text-orange-500 hover:text-orange-400 transition font-medium" onClick={() => window.location.href = '/projects'}>
                     View Details <ArrowRight size={18} className="ml-2" />
                   </button>
                 </div>
@@ -159,7 +159,7 @@ export default function Home() {
       initial={{opacity:0, y:-40}} whileInView={{opacity:1, y:0}} transition={{ duration:1}} viewport={{once:true, amount:0.3}}>
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Why Choose <span className="text-orange-500">SJ Groups India?</span>
+            Why Choose <span className="text-orange-500">SJ Group India?</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
@@ -193,7 +193,7 @@ export default function Home() {
           Ready to Start Your Next Project?
         </h2>
         <p className="mt-4 text-gray-700">
-          Partner with SJ Groups India for reliable and innovative solutions.
+          Partner with SJ Group India for reliable and innovative solutions.
         </p>
 
         <button className="mt-8 bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
