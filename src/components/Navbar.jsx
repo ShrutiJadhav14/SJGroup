@@ -5,11 +5,12 @@ import logo from "../assets/images/logo.png";
 import Projects  from "../pages/Projects";
 import { AnimatePresence } from "framer-motion";
 import {motion} from "framer-motion";
-
+import QuoteModal from "./QuoteModal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -17,6 +18,7 @@ export default function Navbar() {
     "relative text-gray-200 font-medium transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-500 after:transition-all after:duration-300 hover:after:w-full hover:text-orange-500";
 
   return (
+    <>
     <nav className="sticky top-0 z-50 w-full bg-gradient-to-r from-slate-900 via-slate-800 to-charcoal shadow-lg">
       
       {/* Top Accent Line */}
@@ -82,10 +84,13 @@ export default function Navbar() {
                 <Link to="/contact" className={linkStyle}>Contact</Link>
 
           </div>
+  
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition shadow-md hover:shadow-orange-500/30">
+            <button 
+              onClick={() => setIsQuoteOpen(true)}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition shadow-md hover:shadow-orange-500/30">
               Get Quote
             </button>
           </div>
@@ -188,7 +193,11 @@ export default function Navbar() {
                 Contact
               </Link>
 
-              <button className="w-full mt-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition">
+              <button onClick={()=> {
+                setIsOpen(false);
+                setIsQuoteOpen(true);
+              }}
+               className="w-full mt-3 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition">
                 Get Quote
               </button>
             </div>
@@ -197,5 +206,12 @@ export default function Navbar() {
 
       </div>
     </nav>
+          {/* Quote Modal */}
+      <QuoteModal
+        isOpen={isQuoteOpen}
+        onClose={() => setIsQuoteOpen(false)}
+      />
+      </>
   );
+
 }
