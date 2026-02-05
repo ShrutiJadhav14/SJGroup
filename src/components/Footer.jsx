@@ -38,8 +38,8 @@ export default function Footer() {
               <Link to="facebook.com" className="group p-2 rounded-lg border border-[#1877F2] transition duration-300 hover:bg-[#1877F2]">
                 <Facebook size={18} className="text-[#1877F2] group-hover:text-white transition duration-300"/>
               </Link>
-              <Link to="instagram.com" className="group p-2 rounded-lg border border-[#e440d1] transition duration-300 hover:bg-[#e440d1]">
-                <Instagram size={18} className="text-[#e440d1] group-hover:text-white transition duration-300" />
+              <Link to="instagram.com" className="group p-2 rounded-lg border border-[#e440bb] transition duration-300 hover:bg-[#e440bb]">
+                <Instagram size={18} className="text-[#e440bb] group-hover:text-white transition duration-300" />
               </Link>
               <Link to="youtube.com" className="group p-2 rounded-lg border border-[#FF0000] transition duration-300 hover:bg-[#FF0000]">
                 <Youtube size={18} className="text-[#FF0000] group-hover:text-white transition duration-300" />

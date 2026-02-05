@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 
 export default function QuoteModal({ isOpen, onClose }) {
+  
   const [form, setForm] = useState({
     name: "",
     email: "",
