@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 
 export default function QuoteModal({ isOpen, onClose }) {
+  
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -44,7 +45,7 @@ export default function QuoteModal({ isOpen, onClose }) {
 
   emailjs.send(
   import.meta.env.VITE_SERVICE_ID,
-  import.meta.env.VITE_TEMPLATE_ID,
+  import.meta.env.VITE_QUOTE_TEMPLATE_ID,
   form,
   import.meta.env.VITE_PUBLIC_KEY
 )
