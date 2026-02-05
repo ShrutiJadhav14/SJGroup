@@ -70,7 +70,7 @@ export default function Navbar() {
                         to={`/services/${item}`}
                         className="block px-5 py-3 text-gray-300 hover:bg-orange-500 hover:text-white transition"
                       >
-                        {item.replace("-", " ").toUpperCase()}
+                        {item.replace("-", " ").toLowerCase()}
                       </Link>
                     ))}
                   </motion.div>
@@ -146,7 +146,6 @@ export default function Navbar() {
                       "construction",
                       "industrial-plant",
                       "real-estate",
-                      "hospitality",
                     ].map((item, i) => (
                       <Link
                         key={i}
@@ -157,7 +156,7 @@ export default function Navbar() {
                         }}
                         className="block text-gray-300 hover:text-orange-500 transition"
                       >
-                        {item.replace("-", " ").toUpperCase()}
+                        {item.replace("-", " ").toLowerCase()}
                       </Link>
                     ))}
                   </div>

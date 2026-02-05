@@ -44,7 +44,7 @@ export default function Contact() {
           </h1>
 
           <p className="text-gray-400 mt-8 max-w-md">
-            Have a project in mind? Reach out to SJ Groups India and let’s
+            Have a project in mind? Reach out to SJ Group India and let’s
             build something remarkable together.
           </p>
 
@@ -67,9 +67,10 @@ export default function Contact() {
           <div className="mt-16 rounded-xl overflow-hidden shadow-2xl border border-white/10">
             <iframe
               title="map"
-              src="https://www.google.com/maps?q=Warje+Pune&output=embed"
-              className="w-full h-64"
+              src="https://www.google.com/maps?q=Survey+no.+125/1A,+Yash+Towers,+Ambedkar+Chowk,+Warje,+Pune&output=embed"
+              className="w-full h-64 md:h-80"
               loading="lazy"
+              allowFullScreen
             />
           </div>
         </motion.div>
