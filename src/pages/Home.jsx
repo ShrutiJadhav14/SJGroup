@@ -101,7 +101,7 @@ export default function Home() {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-slate-900 p-8 rounded-xl shadow-lg hover:shadow-orange-500/20 transition-all duration-300"
+              className="bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-orange-500/20 transition-all duration-300"
             >
               <h2 className="text-4xl font-bold text-orange-500">
                 {item.number}

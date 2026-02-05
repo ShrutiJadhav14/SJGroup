@@ -55,7 +55,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-4">
               <Mail className="text-orange-500" />
-              info@sjgroupsindia.in
+              sales@sjgroupindia.in
             </div>
             <div className="flex items-center gap-4">
               <MapPin className="text-orange-500" />
@@ -65,13 +65,13 @@ export default function Contact() {
 
           {/* ===== Map ===== */}
           <div className="mt-16 rounded-xl overflow-hidden shadow-2xl border border-white/10">
-            <iframe
-              title="map"
-              src="https://www.google.com/maps?q=Survey+no.+125/1A,+Yash+Towers,+Ambedkar+Chowk,+Warje,+Pune&output=embed"
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.9835795914955!2d73.80625097371939!3d18.484402970280968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfda2f49639d%3A0x8a5cbd4298614fd7!2sYash%20Towers!5e0!3m2!1sen!2sin!4v1770274479995!5m2!1sen!2sin" 
               className="w-full h-64 md:h-80"
-              loading="lazy"
-              allowFullScreen
-            />
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </motion.div>
 
