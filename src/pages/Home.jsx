@@ -6,6 +6,8 @@ import video from "../assets/videos/video.mp4";
 import project3 from "../assets/images/infra-site.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import ProjectTimeline from "../components/ProjectTimeline.jsx";
+import StatsSection from "../components/StatsSection.jsx";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -105,9 +107,9 @@ export default function Home() {
     </motion.section>
 
       {/* ================= COMPANY HIGHLIGHTS ================= */}
-      <motion.section className="py-20 bg-slate-900"
+      {/* <motion.section className="py-20 bg-slate-900"
       initial={{opacity:0, y:-40}} whileInView={{opacity:1, y:0}} transition={{ duration:1}} viewport={{once:true, amount:0.3}}>
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center cursor-pointer">
 
           {[
             { number: "15+", title: "Years of Experience" },
@@ -126,7 +128,8 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
+      <StatsSection />
 
       {/* ================= FEATURED PROJECTS PREVIEW ================= */}
       <motion.section className="py-20 px-6 bg-slate-950"
@@ -139,7 +142,7 @@ export default function Home() {
             Delivering excellence across multiple industries.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid md:grid-cols-3 gap-8 mt-12 cursor-pointer">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -167,8 +170,8 @@ export default function Home() {
                   onClick={() => navigate(`/project/${project.id}`)}
                   className="mt-4 inline-flex items-center text-orange-500 hover:text-orange-400 transition font-medium"
                   >
-  View Details <ArrowRight size={18} className="ml-2" />
-</button>
+                     View Details <ArrowRight size={18} className="ml-2" />
+                  </button>
 
                 </div>
               </motion.div>
@@ -177,8 +180,11 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* ====================Project Timeline Section=================== */}
+      <ProjectTimeline />
+
       {/* ================= WHY CHOOSE US ================= */}
-      <motion.section className="py-20 bg-slate-800 px-6"
+      <motion.section className="py-20 bg-slate-800 px-6 cursor-pointer"
       initial={{opacity:0, y:-40}} whileInView={{opacity:1, y:0}} transition={{ duration:1}} viewport={{once:true, amount:0.3}}>
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -221,7 +227,7 @@ export default function Home() {
 
         <button 
         onClick={() => navigate("/contact")}
-        className="mt-8 bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        className="mt-8 bg-white text-orange-600 cursor-pointer px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
             Get a Free Consultation
         </button>
 
