@@ -35,13 +35,13 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-4">
-              <Link to="facebook.com" className="group p-2 rounded-lg border border-[#1877F2] transition duration-300 hover:bg-[#1877F2]">
+              <Link to="https://www.facebook.com/p/SJ-GROUP-INDIA-100063725211207/" className="group p-2 rounded-lg border border-[#1877F2] transition duration-300 hover:bg-[#1877F2]">
                 <Facebook size={18} className="text-[#1877F2] group-hover:text-white transition duration-300"/>
               </Link>
-              <Link to="instagram.com" className="group p-2 rounded-lg border border-[#e440bb] transition duration-300 hover:bg-[#e440bb]">
+              <Link to="https://www.instagram.com/sj_group_india/" className="group p-2 rounded-lg border border-[#e440bb] transition duration-300 hover:bg-[#e440bb]">
                 <Instagram size={18} className="text-[#e440bb] group-hover:text-white transition duration-300" />
               </Link>
-              <Link to="youtube.com" className="group p-2 rounded-lg border border-[#FF0000] transition duration-300 hover:bg-[#FF0000]">
+              <Link to="https://www.youtube.com/@sjcontractspvtltdpune" className="group p-2 rounded-lg border border-[#FF0000] transition duration-300 hover:bg-[#FF0000]">
                 <Youtube size={18} className="text-[#FF0000] group-hover:text-white transition duration-300" />
               </Link>
             </div>
