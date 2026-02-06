@@ -10,18 +10,19 @@ import { useEffect } from "react";
 export default function Home() {
   const navigate = useNavigate();
    const projects = [
-    {
+    { id: "commercial",
       title: "Commercial Complex",
       desc: "Modern commercial building with advanced infrastructure planning.",
       image: project1,
         
     },
-    {
+    { id: "residential",
       title: "Residential Township",
       desc: "Large-scale residential development with premium amenities.",
       image: project2,
     },
-    {
+    { 
+      id: "industrial",
       title: "Industrial Infrastructure",
       desc: "High-quality industrial construction with safety compliance.",
       image: project3,
@@ -162,9 +163,13 @@ export default function Home() {
                   <p className="text-gray-400 mt-2">
                     {project.desc}
                   </p>
-                  <button className="mt-4 inline-flex items-center text-orange-500 hover:text-orange-400 transition font-medium" onClick={() => window.location.href = '/projects'}>
-                    View Details <ArrowRight size={18} className="ml-2" />
-                  </button>
+                  <button
+                  onClick={() => navigate(`/project/${project.id}`)}
+                  className="mt-4 inline-flex items-center text-orange-500 hover:text-orange-400 transition font-medium"
+                  >
+  View Details <ArrowRight size={18} className="ml-2" />
+</button>
+
                 </div>
               </motion.div>
             ))}
