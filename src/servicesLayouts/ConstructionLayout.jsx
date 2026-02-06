@@ -27,7 +27,11 @@ export default function ConstructionLayout() {
       </section>
 
       {/* ================= ABOUT SECTION ================= */}
-      <section className="py-20 px-6">
+      <motion.section
+       initial={{ opacity: 0, y: 50 }}
+        whileInView={{opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+       className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center cursor-pointer">
 
           <motion.div
@@ -76,10 +80,13 @@ export default function ConstructionLayout() {
           </motion.div>
 
         </div>
-      </section>
+      </motion.section>
 
       {/* ================= PROJECT GALLERY ================= */}
-      <section className="py-20 px-6 bg-slate-900">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }} 
+            className="py-20 px-6 bg-slate-900">
         <div className="max-w-7xl mx-auto cursor-pointer">
           <h2 className="text-center text-4xl font-bold mb-14">
             Recent <span className="text-orange-500">Projects</span>
@@ -101,10 +108,13 @@ export default function ConstructionLayout() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* ================= STATS ================= */}
-      <section className="py-20 px-6 text-center">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }} 
+            className="py-20 px-6 text-center">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
           {[
             { number: "500+", label: "Projects Completed" },
@@ -122,17 +132,20 @@ export default function ConstructionLayout() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* ================= CTA ================= */}
-      <section className="py-16 text-center bg-orange-500">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6}} 
+            className="py-16 text-center bg-orange-500">
         <h2 className="text-3xl font-bold mb-4">
           Let’s Build Your Dream Project
         </h2>
         <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold cursor-pointer hover:bg-gray-100 transition" onClick={() => window.location.href = '/contact'}>
           Request Consultation
         </button>
-      </section>
+      </motion.section>
 
     </div>
   );

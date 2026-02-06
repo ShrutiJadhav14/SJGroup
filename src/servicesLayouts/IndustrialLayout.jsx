@@ -27,7 +27,10 @@ export default function IndustrialLayout() {
       </section>
 
       {/* ===== ABOUT SECTION ===== */}
-      <section className="py-20 px-6">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6}} 
+            className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
           <div>
@@ -67,10 +70,14 @@ export default function IndustrialLayout() {
             viewport={{ once: true }}
           />
         </div>
-      </section>
+      </motion.section>
 
       {/* ===== PROCESS SECTION ===== */}
-      <section className="py-20 bg-slate-900 px-6">
+      <motion.section
+      initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+       className="py-20 bg-slate-900 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-14">
             Our <span className="text-orange-500">Process</span>
@@ -104,10 +111,13 @@ export default function IndustrialLayout() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* ===== IMAGE GALLERY ===== */}
-      <section className="py-20 px-6">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }} 
+            className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 hover:cursor-pointer">
           {[industrial1, industrial2, industrial3].map((img, i) => (
             <motion.div
@@ -123,17 +133,20 @@ export default function IndustrialLayout() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* ===== CTA ===== */}
-      <section className="py-16 text-center bg-orange-500">
+      <motion.section  initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6}}
+            className="py-16 text-center bg-orange-500">
         <h2 className="text-3xl font-bold mb-4">
           Build Your Industrial Future With Us
         </h2>
         <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold cursor-pointer hover:bg-gray-100 transition" onClick={() => window.location.href = '/contact'}>
           Get Industrial Quote
         </button>
-      </section>
+      </motion.section>
 
     </div>
   );
