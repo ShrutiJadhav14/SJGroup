@@ -91,7 +91,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <button 
               onClick={() => setIsQuoteOpen(true)}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition shadow-md hover:shadow-orange-500/30">
+              className="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition shadow-md hover:shadow-orange-500/30">
               Get Quote
             </button>
           </div>

@@ -32,7 +32,10 @@ export default function RealEstateLayout() {
       </section>
 
       {/* ===== FEATURE SECTION ===== */}
-      <section className="py-20 px-6 cursor-pointer">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }} 
+            className="py-20 px-6 cursor-pointer">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
 
           {[real1, real2, real3].map((img, i) => (
@@ -58,10 +61,13 @@ export default function RealEstateLayout() {
           ))}
 
         </div>
-      </section>
+      </motion.section>
 
       {/* ===== INVESTMENT STATS ===== */}
-      <section className="py-20 bg-slate-800 px-6 text-center cursor-pointer">
+      <motion.section initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }} 
+            className="py-20 bg-slate-800 px-6 text-center cursor-pointer">
         <h2 className="text-4xl font-bold mb-14">
           Investment <span className="text-orange-500">Highlights</span>
         </h2>
@@ -83,17 +89,20 @@ export default function RealEstateLayout() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* ===== CTA ===== */}
-      <section className="py-16 text-center bg-orange-500">
+      <motion.section  initial={{ opacity: 0, y: 50 }}
+            whileInView={{opacity: 1, y: 0 }}
+            transition={{ duration: 0.6}}
+            className="py-16 text-center bg-orange-500">
         <h2 className="text-3xl font-bold mb-4">
           Invest in Your Future Today
         </h2>
         <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold cursor-pointer hover:bg-gray-100 transition" onClick={() => window.location.href = '/contact'}>
           Contact Sales Team
         </button>
-      </section>
+      </motion.section>
 
     </div>
   );

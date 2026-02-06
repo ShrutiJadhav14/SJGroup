@@ -98,7 +98,7 @@ export default function Home() {
           transition={{ delay: 0.9 }}
           className="mt-8"
         >
-          <button className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl" onClick={() => window.location.href = '/projects'}>
+          <button className="bg-orange-500 cursor-pointer hover:bg-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl" onClick={() => window.location.href = '/projects'}>
             Explore Projects
           </button>
         </motion.div>
